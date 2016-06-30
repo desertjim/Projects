@@ -1,5 +1,6 @@
 package com.android.jimitjaishwal.moviesnow.app;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,6 +12,7 @@ public class MovieResult {
         private boolean adult;
         private String overview;
         private String release_date;
+        private ArrayList<Integer> genre_ids;
         private int id;
         private String original_title;
         private String original_language;
@@ -20,7 +22,7 @@ public class MovieResult {
         private int vote_count;
         private boolean video;
         private double vote_average;
-        private List<Integer> genre_ids;
+
 
         public String getPoster_path() {
             return poster_path;
@@ -130,7 +132,7 @@ public class MovieResult {
             return genre_ids;
         }
 
-        public void setGenre_ids(List<Integer> genre_ids) {
+        public void setGenre_ids(ArrayList<Integer> genre_ids) {
             this.genre_ids = genre_ids;
         }
 }

@@ -1,5 +1,6 @@
 package com.android.jimitjaishwal.moviesnow.app;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,13 +17,14 @@ public class Movie {
      */
 
     private int page;
+    private ArrayList<MovieResult> results;
     private int total_results;
     private int total_pages;
 
     private List<MovieResult> movieResultList;
-    private MovieResult[] results;
 
-    public MovieResult[] getResults() {
+
+    public ArrayList<MovieResult> getResults() {
         return results;
     }
 

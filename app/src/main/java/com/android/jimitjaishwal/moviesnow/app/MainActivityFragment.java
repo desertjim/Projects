@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -63,9 +64,9 @@ public class MainActivityFragment extends Fragment {
                 Log.d("message", message);
                 String code = new Integer(response.code()).toString();
                 Log.d("message", code);
-                List<MovieResult> movieResultList = response.body().getMovieResultList();
-                Log.d("TAG", "Number of movies received: " + movieResultList.size());
-                adapter = new MovieAdapter(getActivity(), movieResultList);
+                ArrayList<MovieResult> results = response.body().getResults();
+                Log.d("TAG", "Number of movies received: " + results.size());
+                adapter = new MovieAdapter(getActivity(), results);
                 recyclerView.setAdapter(adapter);
             }
 
